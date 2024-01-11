@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Report Submission</title>
+</head>
+<body>
+    <h2>Report Submission</h2>
+    <form action="submit.php" method="post" enctype="multipart/form-data">
+        <label for="report">Report:</label>
+        <textarea name="report" id="report" required></textarea>
+        
+        <label for="photo">Attach Photo:</label>
+        <input type="file" name="photo" id="photo" accept="image/*" required>
+
+        <input type="submit" value="Submit Report">
+    </form>
+</body>
+</html>

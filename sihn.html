@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Reg Form</title>
+    <style type="text/css">
+        body{
+            font-family: Calibri;
+        }
+        input[type="text"] {
+            width: 250px;
+        }
+        input[type="submit"], input[type="reset"] {
+            width: 77px;
+            height: 27px;
+            position: relative;left: 180px;
+        }
+        form{
+            text-align: center;
+            font-family: Calibri;
+            font-size: 20px;
+            border: 3px solid black;
+            width: 600px;
+            margin: 20px auto;
+        }
+        td {
+            padding: 10px;
+        }
+        td:first-child {
+            text-align: right;
+            font-weight: bold;
+        }
+        td:last-child {
+            text-align: left;
+        }
+    </style>
+    <script>
+        function validate() {
+            var fname = document.reg_form.fname;
+            var lname = document.reg_form.lname;
+            var address = document.reg_form.address;
+            var gender = document.reg_form.gender;
+            var email = document.reg_form.email;
+            var mobile = document.reg_form.mobile;
+            var course = document.reg_form.course;
+
+            if (fname.value.length <= 0) {
+                alert("Name is required");
+                fname.focus();
+                return false;
+            }
+            if (lname.value.length <= 0) {
+                alert("Last Name is required");
+                lname.focus();
+                return false;
+            }
+            if (address.value.length <= 0) {
+                alert("Address is required");
+                address.focus();
+                return false;
+            }
+            if (gender.value.length <= 0) {
+                alert("Gender is required");
+                gender.focus();
+                return false;
+            }
+            if (email.value.length <= 0) {
+                alert("Email Id is required");
+                email.focus();
+                return false;
+            }
+            if (mobile.value.length <= 0) {
+                alert("Mobile number is required");
+                mobile.focus();
+                return false;
+            }
+            if (course.value == "select course") {
+                alert("Course is required");
+                course.focus();
+                return false;
+            }
+            return false;
+        }
+    </script>
+</head>
+<body>
+    
+    <hr>
+    <form method="" action="" name="reg_form" onsubmit="return validate()">
+        <h2>Registration Form</h2>
+        <table>
+            <tr>
+                <td><label>Name: </label></td>
+                <td>
+                    <input type="text" name="name" placeholder="Name">
+                </td>
+            </tr>
+            <tr>
+                <td><label>ID: </label></td>
+                <td>
+                    <input type="text" name="ID" placeholder="use Upper and lowercase and special char">
+                </td>
+            </tr>
+            <tr>
+                <td><label>Create Passward: </label></td>
+                <td>
+                    <input type="text" name="passward" placeholder="use numbers and upper and lowercase and!@#$%^&*">
+                </td>
+            </tr>
+            <tr>
+                <td><label>Conform Passward: </label></td>
+                <td>
+                    <input type="text" name="passward" placeholder="passward must be same">
+                </td>
+            </tr>
+            <tr>
+                <td><label>Mobile Number: </label></td>
+                <td>
+                    <input type="text" name="Registration-no" placeholder="only 10 digits">
+                </td>
+            </tr>
+            <tr>
+                <td><label>Email Id: </label></td>
+                <td>
+                    <input type="text" name="email" placeholder="example@gmail.com">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="submit" name="submit" value="Submit">
+                    <input type="reset" name="reset" value="Reset">
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
+<p>Already have an account? <a href="reg.html" onclick="loadLogin()">Login here</a>.</p>

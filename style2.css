@@ -1,0 +1,75 @@
+body {
+    background-image: url('login.png'); /* Replace 'your-image-path.jpg' with the actual path to your background image */
+    background-size: cover;
+    background-position: center;
+    font-family: Arial, sans-serif; /* Adjust font if needed */
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    max-width: 400px;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.tabs {
+    /* Your tabs styles here */
+}
+
+.tab-content {
+    display: none;
+}
+
+#content-login {
+    display: block; /* Display the login content initially */
+}
+
+/* Add more styling as needed for form elements */
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Additional styles for the registration link */
+p {
+    text-align: center;
+  
+    margin-top:450px;
+    text-align: left;
+    margin-right:100px ;
+}
+
+a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
